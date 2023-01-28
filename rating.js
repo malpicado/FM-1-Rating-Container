@@ -7,12 +7,12 @@ const ratingCard = document.querySelector("#rating-card");
 ratingForm.addEventListener("submit", (event) =>{
     event.preventDefault()
 
-   const selectedOption = document.querySelector(`input[name="rating"]:checked`);
-   const ratingValue = selectedOption.value;
-   selectedRating.innerHTML = ratingValue;
-   
+    const selectedOption = event.target.elements?.rating?.value || 0
+    const ratingValue = selectedOption;
+    selectedRating.innerHTML = ratingValue;
+    
    //ocultar la card de calificación
-   ratingCard.style.display = "none";
+    ratingCard.style.display = "none";
 
    //mostar la pagina de "gracias"
     thankYouPage.style.display = "block";
