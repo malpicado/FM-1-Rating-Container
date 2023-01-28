@@ -35,22 +35,15 @@ body{
     justify-content: center;
 }
 
-#main-container {
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: px;
-    height: 350px;
-    margin: 0 auto;
+    width: min(90%, 600px);
+    padding: 1rem;
+    margin-inline: auto;
     text-align: center;
     background-color:aqua;
-}
-
-.card{
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 h2{
