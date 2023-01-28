@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Rating - Challenge #1</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="main-container" class="card">
+        <div id="rating-card">
+            <div class="rating-card" style="display: block;">
+                <div class="icon-star"><img src="icon-star.svg" alt=""></div>
+                <h2>How did we do?</h2>
+            </div>
+            <div class="card-body">
+                <p>Please let us know how we did with your support request. All feedback is appreciated to help us
+                    improve our offering!</p>
+                <form id="ratingForm">
+                    <ul class="rating-options">
+                        <li><input type="radio" name="rating" value="1" required><label for="1">1</label></li>
+                        <li><input type="radio" name="rating" value="2" required><label for="2">2</label></li>
+                        <li><input type="radio" name="rating" value="3" required><label for="3">3</label></li>
+                        <li><input type="radio" name="rating" value="4" required><label for="4">4</label></li>
+                        <li><input type="radio" name="rating" value="5" required><label for="5">5</label></li>
+                    </ul>
+                    <div class="form-actions">
+                        <button id="submitButton" type="submit" class="submit-button">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="thank-you-message" id="thankYouPage" style="display: none;">
+                <img src="illustration-thank-you.svg" alt="gracias">
+                <h1>You selected <span id="selectedRating"></span> of 5</h1>
+                <h2>Thank you!</h2>
+                <p>We appreciate you taking the time to give a rating. If you ever need more support, do not hesitate
+                    hesitate to get in touch</p>
+            </div>
+        </div>
+    </div>
+    <script src="rating.js"></script>
+</body>
+
+</html>

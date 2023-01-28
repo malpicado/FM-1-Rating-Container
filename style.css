@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Press+Start+2P&family=Roboto+Mono:wght@500;700&family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap');
+
+
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: "overpass";
+    min-height: 100vh;
+}
+
+.icon-star{
+    padding: 10px;
+    background-color: hsl(213, 19%, 18%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: px;
+    height: 350px;
+    margin: 0 auto;
+    text-align: center;
+    background-color:aqua;
+}
+
+.card{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    color: white;
+}
+
+.card-body p, li{
+    color: hsl(217, 12%, 63%);
+}
+
+.rating-options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-options li{
+    list-style: none;
+    margin-right: 1.8em;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"]{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+}
+
+input[type="radio"]+label{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+}
+
+input[type="radio"] + label::before{
+    content: attr(value);
+    font-size: 18px;
+    color: black;
+    width: 50px;
+}
+
+
+label span{
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    background-color: hsl(25, 97%, 53%);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+h1{
+    color: hsl(25,97%,53%);
+    background-color:  hsl(213, 19%, 18%);
+    padding: 5px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin: 15px auto;
+}
+
+#thankYouPage p{
+    color: hsl(217, 12%, 63%);
+}
