@@ -7,40 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Rating - Challenge #1</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="main-container" class="card">
-        <div id="rating-card">
-            <div class="rating-card" style="display: block;">
-                <div class="icon-star"><img src="icon-star.svg" alt=""></div>
-                <h2>How did we do?</h2>
-            </div>
-            <div class="card-body">
-                <p>Please let us know how we did with your support request. All feedback is appreciated to help us
-                    improve our offering!</p>
-                <form id="ratingForm">
-                    <ul class="rating-options">
-                        <li><input type="radio" name="rating" value="1" required><label for="1">1</label></li>
-                        <li><input type="radio" name="rating" value="2" required><label for="2">2</label></li>
-                        <li><input type="radio" name="rating" value="3" required><label for="3">3</label></li>
-                        <li><input type="radio" name="rating" value="4" required><label for="4">4</label></li>
-                        <li><input type="radio" name="rating" value="5" required><label for="5">5</label></li>
-                    </ul>
-                    <div class="form-actions">
-                        <button id="submitButton" type="submit" class="submit-button">Submit</button>
-                    </div>
-                </form>
-            </div>
+        <figure class="card-star">
+            <img src="icon-star.svg" alt="icon star">
+        </figure>
+        <div class="card-text">
+            <h2>How did we do?</h2>
+            <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve
+                our offering!</p>
         </div>
-        <div class="card-footer">
-            <div class="thank-you-message" id="thankYouPage" style="display: none;">
-                <img src="illustration-thank-you.svg" alt="gracias">
-                <h1>You selected <span id="selectedRating"></span> of 5</h1>
-                <h2>Thank you!</h2>
-                <p>We appreciate you taking the time to give a rating. If you ever need more support, do not hesitate
-                    hesitate to get in touch</p>
+        <form class="card-request">
+            <div>
+                <label for="boton1">1</label>
+                <input type="radio" id="boton1" value="1" name="score">
             </div>
+            <div>
+                <label for="boton2">2</label>
+                <input type="radio" id="boton2" value="2" name="score">
+            </div>
+            <div>
+                <label for="boton3">3</label>
+                <input type="radio" id="boton3" value="3" name="score">
+            </div>
+            <div>
+                <label for="boton4">4</label>
+                <input type="radio" id="boton4" value="4" name="score">
+            </div>
+            <div>
+                <label for="boton5">5</label>
+                <input type="radio" id="boton5" value="5" name="score">
+            </div>
+        </form>
+        <div class="card-button">
+            <button id="button" type="submit" class="button">Submit</button>
+        </div>
+        <p id="output"></p>
+    </div>
+    
+    <div class="card-thanks card">
+        <figure class="card-thanks-icon">
+            <img src="illustration-thank-you.svg" alt="thank-you-pic">
+        </figure>
+        <div class="selected-message">
+            <p id="rank"></p>
+        </div>
+        <div class="card-thanks-message card-text">
+            <h2>Thank you!</h2>
+            <p>We appreciate you taking the time to give a rating. If you ever need more support, do not hesitate
+                hesitate to get in touch</p>
         </div>
     </div>
     <script src="rating.js"></script>

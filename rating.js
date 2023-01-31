@@ -1,19 +1,19 @@
-const ratingForm = document.querySelector("#ratingForm");
-const thankYouPage = document.querySelector("#thankYouPage");
-const selectedRating = document.querySelector("#selectedRating");
-const ratingCard = document.querySelector("#rating-card");
+const button = document.querySelector("#button");
+const options = document.querySelectorAll('input[name="score"]');
 
-//escuchar el evento para el botón "submit"
-ratingForm.addEventListener("submit", (event) =>{
-    event.preventDefault()
+button.addEventListener("click", mostrarCardGracias)
 
-   const selectedOption = document.querySelector(`input[name="rating"]:checked`);
-   const ratingValue = selectedOption.value;
-   selectedRating.innerHTML = ratingValue;
-   
-   //ocultar la card de calificación
-   ratingCard.style.display = "none";
+function mostrarCardGracias () {
+    document.querySelector(".card-thanks").style.display = "flex";
+    document.querySelector("#main-container").style.display = "none";
+    
+    let selectedOption;
 
-   //mostar la pagina de "gracias"
-    thankYouPage.style.display = "block";
-})
+    for (const option of options) {
+        if(option.checked){
+            selectedOption = option.value;
+            break;
+        }
+    }
+rank.innerText = selectedOption ? `You selected ${selectedOption} out of 5` : `You haven't selected`;
+}
